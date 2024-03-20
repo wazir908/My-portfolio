@@ -1,0 +1,70 @@
+.carousel-container {
+  max-width: 80%; /* Adjust max-width as needed */
+  margin: 0 auto;
+  font-family: 'Kreon', sans-serif; /* Apply Kreon font */
+  padding: 20px;
+  height: auto;
+  background: transparent; /* Dark blue to black gradient */
+  border-radius: 10px; /* Add border radius for a rounded appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  overflow: hidden; /* Hide overflow content */
+  position: relative; /* Set position to relative for absolute positioning of icons */
+}
+
+.slide {
+  text-align: center;
+}
+
+.carousel-container h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease; /* Add fade-in animation */
+}
+
+.icon-container h2 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff; /* Set heading color to white */
+}
+
+.slick-dots {
+  bottom: -50px; /* Adjust dot position */
+}
+
+.slick-dots li button:before {
+  font-size: 20px; /* Increase dot size */
+  color: #ffffff; /* Adjust dot color */
+}
+
+.slick-slider .slick-arrow {
+  display: none !important; /* Hide both previous and next buttons */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Slide up animation */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .carousel-container {
+    max-width: 100%;
+    border-radius: 0; /* Remove border radius for mobile */
+    box-shadow: none; /* Remove box shadow for mobile */
+  }
+}

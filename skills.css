@@ -1,0 +1,77 @@
+/* Style for the skills section */
+.skills {
+    font-family: "Kreon", sans-serif;
+    padding: 60px 0;
+    background: linear-gradient(to right, #000000, #000289);
+    color: #ffffff; /* Set text color to white */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.skills .progress {
+    margin-top: 20px; /* Increase top margin for spacing */
+}
+
+.skills .progress .skill {
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+    font-weight: 600;
+    font-family: "Kreon", sans-serif;
+    color: #ffffff;
+}
+
+.skills .progress .skill .val {
+    margin-left: auto; /* Push value to the right */
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+    background: #f2f3f5;
+    position: relative;
+    overflow: hidden;
+    height: 8px;
+    border-radius: 10px; /* Apply border radius to match progress bar */
+}
+
+.skills .progress-bar {
+    height: 100%; /* Set height to fill container */
+    background-color: #00bfe7;
+    transition: width 0.5s ease; /* Smooth transition for width changes */
+    border-radius: 10px; /* Apply border radius to progress bar */
+}
+
+.container {
+    width: 100%; /* Adjust width for better responsiveness */
+    max-width: 960px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Add padding to the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Mobile view styles */
+@media (max-width: 767px) {
+    .skills {
+        padding: 40px 0; /* Adjust padding for mobile view */
+    }
+    
+    .skills .progress {
+        margin-top: 15px; /* Decrease top margin for spacing */
+    }
+    
+    .skills .progress .skill {
+        font-size: 16px; /* Decrease font size for mobile view */
+        justify-content: space-between; /* Increase space between skill name and value */
+    }
+    
+    .skills .progress .skill .val {
+        display: inline-block; /* Display skill values */
+        margin-left: 10px; /* Add spacing between skill name and value */
+    }
+    
+    .skills .progress-bar-wrap {
+        height: 10px; /* Increase progress bar height for mobile view */
+        margin-bottom: 10px; /* Add spacing between progress bars */
+    }
+}

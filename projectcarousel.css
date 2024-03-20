@@ -1,0 +1,65 @@
+.project-carousel {
+    position: relative;
+    width: 100%; /* Decreased width to make the carousel smaller */
+    max-width: 600px; /* Set maximum width for the carousel */
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 8px; /* Decreased border-radius for a slightly less rounded appearance */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Decreased box shadow for a lighter depth */
+}
+
+.carousel-image {
+    width: 100%; /* Increase the image size to fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    transition: transform 0.5s ease; /* Add transition for smoother image transitions */
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px; /* Decreased padding for more compact button spacing */
+}
+
+.carousel-buttons button {
+    background-color: transparent;
+    color: #0c0053;
+    border: none;
+    font-size: 20px; /* Decreased font size for smaller buttons */
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease; /* Add transition for smoother button hover effect */
+}
+
+.carousel-buttons button:hover {
+    color: #ff0000; /* Change color on hover */
+}
+
+/* Add styles for carousel indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 5px; /* Decreased bottom margin for indicators */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-indicators button {
+    background-color: transparent;
+    border: none;
+    width: 8px; /* Decreased width of indicators */
+    height: 8px; /* Decreased height of indicators */
+    border-radius: 50%;
+    margin: 0 3px; /* Decreased margin between indicators */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smoother indicator hover effect */
+}
+
+.carousel-indicators button:hover,
+.carousel-indicators button.active {
+    background-color: #0c0053; /* Change color on hover and when active */
+}

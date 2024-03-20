@@ -1,0 +1,16 @@
+.footer {
+    background: transparent;
+    color: #fff;
+    font-family: 'Kreon', sans-serif;
+    font-weight: 700;
+    padding: 40px 0; /* Increased padding */
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer p::before {
+    content: "\00a9";
+  }

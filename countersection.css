@@ -1,0 +1,85 @@
+/* General counter section styling */
+.counter {
+    width: 100%;
+    font-family: 'Kreon', sans-serif;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Container for counter items */
+.counter__content {
+    max-width: 1200px; /* Limit the maximum width of the container */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Projects heading style */
+.projects-heading {
+    margin-bottom: 80px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff; /* Darker text color */
+}
+
+/* Individual counter items */
+.counter__item {
+    position: relative;
+    width: 80%; /* Set width in percentage */
+    padding: 20px; /* Adjust padding */
+    border-radius: 50%; /* Set border-radius to 50% for circular shape */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smoother animation */
+    margin: 5%; /* Add margin as 5% of the container's width for spacing */
+    overflow: hidden; /* Hide overflow to maintain shape */
+    background: linear-gradient(to right, #000000, #000289); /* Gradient background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), /* Add box shadow */
+                0 0 10px 6px rgb(255, 255, 255); /* Shining white border effect */
+    border: 2px solid transparent; /* Initially set border as transparent */
+}
+
+/* Hover effect for shining white border */
+.counter__item:hover {
+    border-color: rgba(255, 255, 255, 0.5); /* Change border color on hover */
+}
+
+/* Text styling within counter items */
+.counter__item__text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #ffffff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+.counter__item__text h2 {
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 18px;
+}
+
+.counter__item__text p {
+    margin-bottom: 0;
+}
+
+/* Add hover animations */
+.counter__item:hover {
+    transform: scale(1.1) rotate(45deg); /* Scale up and rotate the item on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Add animations on click */
+.counter__item:active {
+    transform: scale(0.9) rotate(45deg); /* Scale down and rotate the item on click */
+    box-shadow: none; /* Remove shadow on click */
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 992px) {
+    .counter__item {
+        width: 100%;  /* Decrease width for medium screens */
+        padding: 15px; /* Adjust padding for medium screens */
+    }
+}

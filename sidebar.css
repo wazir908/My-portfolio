@@ -1,0 +1,99 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -60px; /* Initially hidden */
+    width: 60px; /* Adjust width as needed */
+    height: 100vh; /* Full height */
+    background: linear-gradient(to right, #000000, #000289);/* Semi-transparent black background */
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it's above other content */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.sidebar.visible {
+    left: 0; /* Displayed when visible */
+}
+
+.toggle-btn {
+    position: fixed;
+    bottom: 20px; /* Align to bottom */
+    left: 1px; /* Align to left */
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above the sidebar */
+    display: block; /* Always display */
+}
+
+/* Ensure the toggle button is visible on smaller screens */
+@media only screen and (max-width: 600px) {
+    .toggle-btn {
+        display: block;
+        margin-bottom: 50px; /* Always display on smaller screens */
+    }
+}
+
+.toggle-btn:focus {
+    outline: none; /* Remove focus outline */
+}
+
+.get-connected {
+    padding: 20px;
+    color: #fff;
+}
+
+.get-connected ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.get-connected ul li {
+    margin-bottom: 20px;
+}
+
+.get-connected ul li a {
+    color: #fff;
+    font-size: larger;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get-connected ul li a:hover {
+    color: #ccc;
+}
+
+.get-connected ul li a .icon {
+    margin-bottom: 10px; /* Move icons downwards */
+    font-size: 28px; /* Increased icon size */
+    color: #fff; /* Fill color for icons */
+}
+
+/* Define mobile-specific styles within a media query */
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        left: -250px; /* Initially hidden on mobile */
+        width: 250px; /* Adjust width as needed for mobile */
+    }
+
+    .sidebar.visible {
+        left: 0; /* Displayed when visible on mobile */
+    }
+
+    .toggle-btn {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    .get-connected ul li a .icon {
+        margin-bottom: 0; /* Reset margin for icons on mobile */
+    }
+}
